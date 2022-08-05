@@ -1,9 +1,9 @@
 <?php
 
-namespace Alamiya\Payment;
+namespace Payment;
 
-use Alamiya\Payment\Contracts\Payment as PaymentContract;
-use Alamiya\Payment\Gateways\HyperPay\PaymentValidator;
+use Payment\Contracts\Payment as PaymentContract;
+use Payment\Gateways\HyperPay\PaymentValidator;
 
 class Payment
 {

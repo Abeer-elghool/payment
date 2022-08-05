@@ -1,6 +1,6 @@
 <?php
 
-namespace Alamiya\Payment\Gateways\HyperPay;
+namespace Payment\Gateways\HyperPay;
 
 use Config;
 

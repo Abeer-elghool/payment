@@ -1,6 +1,6 @@
 <?php
 
-namespace Alamiya\Payment;
+namespace Payment;
 
 // use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;

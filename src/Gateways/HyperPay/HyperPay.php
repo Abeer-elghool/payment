@@ -1,8 +1,8 @@
 <?php
 
-namespace Alamiya\Payment\Gateways\HyperPay;
+namespace Payment\Gateways\HyperPay;
 
-use Alamiya\Payment\Contracts\Payment;
+use Payment\Contracts\Payment;
 
 abstract class HyperPay implements Payment
 {
