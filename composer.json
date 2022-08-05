@@ -1,0 +1,26 @@
+{
+    "name": "alamiya/payment",
+    "description": "payment package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "abeer mohamed",
+            "email": "abeerelghool@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Payment\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Alamiya\\Payment\\PaymentServiceProvider"
+            ]
+        }
+    }
+}
