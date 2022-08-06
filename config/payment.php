@@ -8,6 +8,7 @@ return [
         'urls'                => [
             'test_base_url'      => env('PAYMENT_URL', 'https://test.oppwa.com/'),
             'test_checkouts_url' => env('PAYMENT_URL', 'https://test.oppwa.com/v1/checkouts'),
-        ]
+        ],
+        'payment_mood' => env('PAYMENT_MOOD', 'TEST_MOOD'), // TEST_MOOD || PRODUCTION_MOOD
     ]
 ];

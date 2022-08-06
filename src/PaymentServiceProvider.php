@@ -25,9 +25,9 @@ class PaymentServiceProvider extends ServiceProvider
             __DIR__.'/../config/payment.php', 'payment'
         );
 
-        $this->publishes([
-            __DIR__.'/../resources/assets' => public_path('vendor/alamiya'),
-        ], 'public');
+        // $this->publishes([
+        //     __DIR__.'/../resources/assets' => public_path('vendor/payment'),
+        // ], 'public');
     }
 
 

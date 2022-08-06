@@ -14,9 +14,9 @@ class Visa extends HyperPay
             "&amount=" . $this->amount .
             "&merchantTransactionId=" . date("Y-m-d_H-i-s") .
             "&currency=SAR" .
-            "&customer.email=" . $this->user->id .
-            "&customer.givenName=" . $this->user->fullname .
-            "&customer.surname=" . $this->user->phone .
+            "&customer.email=" . optional($this->user)->id .
+            "&customer.givenName=" . optional($this->user)->fullname .
+            "&customer.surname=" . optional($this->user)->phone .
             "&billing.street1=street" .
             "&billing.city=riyadh" .
             "&billing.state=riyadh" .
@@ -30,7 +30,7 @@ class Visa extends HyperPay
         ));
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // this should be set to true in production
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, $this->payment_mood); // this should be set to true in production
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $responseData = curl_exec($ch);
         if (curl_errno($ch)) {
