@@ -2,6 +2,10 @@
 
 namespace Payment\Http\Controllers;
 
+use Illuminate\Http\Request;
+use Payment\Gateways\HyperPay\Visa;
+use Payment\Payment;
+
 class HyperPayController extends Controller
 {
     public function getCheckoutId($type, $user_id, $amount)
