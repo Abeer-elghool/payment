@@ -20,7 +20,6 @@ abstract class HyperPay implements Payment
     {
         $this->amount = round($amount);
         $this->user = $user;
-        $this->payment_mood = $payment_mood == "PRODUCTION_MOOD";
         $this->payment_mood = Config::get('payment.production_mode') == "PRODUCTION_MOOD";
     }
 }
