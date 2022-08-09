@@ -42,7 +42,7 @@ then you can check the response you get with checkoutStatus method that provided
 <?php
 Payment::checkoutStatus(request('id'), request('resourcePath'), $request->type);
 ```
-#Notes
+# Notes
 
 All the routes and methods are predefined in this package you can use them or you can define your own
 
