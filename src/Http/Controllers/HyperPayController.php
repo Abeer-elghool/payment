@@ -5,16 +5,24 @@ namespace Payment\Http\Controllers;
 use Illuminate\Http\Request;
 use Payment\Gateways\HyperPay\{Visa, Mada};
 use Payment\Payment;
+use Illuminate\Support\Facades\Validator;
 
 class HyperPayController extends Controller
 {
     public function getCheckoutId($type, $user_id, $amount)
     {
+        $rules = [
+            'type'    => 'Required|string|in:visa,mada',
+            'amount'  => 'Required|numeric|min:1'
+        ];
+
+        $validator = Validator::make(['type' => $type, 'amount' => $amount], $rules);
+        if ($validator->fails()) {
+            return view('payment::404', ['msgs' => $validator->messages()]);
+        }
+
         // $user = User::find($user_id);
         switch ($type) {
-            case null:
-                return view('payment::404');
-                break;
             case 'visa':
                 $payment_type = new Visa($amount, null);
                 break;

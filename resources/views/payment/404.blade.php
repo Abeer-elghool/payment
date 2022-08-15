@@ -23,7 +23,10 @@
           <div class="card col-xl-12 col-sm-12 col-12 mb-2 mb-xl-0 mt-5" style="background-color: #283046">
             <div class="card-body">
                 <div class="alert alert-danger" role="alert">
-                    <h4>payment type doesn't exists!</h4>
+                    <h4>invalid data!</h4>
+                    @isset($msgs)
+                        <h5>{{ $msgs->first() }}</h5>
+                    @endisset
                 </div>
             </div>
         </div>
