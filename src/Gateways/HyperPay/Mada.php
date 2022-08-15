@@ -10,7 +10,7 @@ class Mada extends HyperPay
 
     public function getCheckoutId()
     {
-        $data = "entityId=" . Config::get('payment.mada_entity_id').
+        $data = "entityId=" . Config::get('payment.hyper_pay.mada_entity_id').
             "&amount=" . $this->amount .
             "&merchantTransactionId=" . date("Y-m-d_H-i-s") .
             "&currency=SAR" .
@@ -24,9 +24,9 @@ class Mada extends HyperPay
             "&billing.postcode=75311" .
             "&paymentType=DB";
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, Config::get('payment.payment_url'));
+        curl_setopt($ch, CURLOPT_URL, Config::get('payment.hyper_pay.urls.test_checkouts_url'));
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            Config::get('payment.authorization_token')
+            Config::get('payment.hyper_pay.authorization_token')
         ));
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
