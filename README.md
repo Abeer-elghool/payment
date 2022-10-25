@@ -30,7 +30,7 @@ $checkout_id = Payment::getCheckoutId($visa);
 ```
 
 then you have to return a view for the user to enter his data.
-fortunately this package provides a view file that you can use. if you which to overwrite it you have to publish the assets using:
+fortunately this package provides a view file that you can use. if you wish to overwrite it you have to publish the assets using:
 `php artisan vendor:publish`
 
 ```php
