@@ -47,7 +47,7 @@ Payment::checkoutStatus(request('id'), request('resourcePath'), $request->type);
 All the routes and methods are predefined in this package you can use them or you can define your own
 
 You can define your credentials by overwritting the config file
-if you are wish to put this package to production mood you have to set the `payment_mood` to `PRODUCTION_MOOD`
+if you wish to put this package to production mood you have to set the `payment_mood` to `PRODUCTION_MOOD`
 ```php
 <?php
 
